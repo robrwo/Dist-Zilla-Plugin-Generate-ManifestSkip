@@ -12,8 +12,14 @@ my $tzil = Builder->from_config(
             'source/dist.ini' => simple_ini(
                 [ 'GatherDir' ],
                 [ 'MetaConfig' ],
-                [ 'Generate::ManifestSkip' ],
-            ),
+                [ 'Generate::ManifestSkip' => {
+                    add => '\.tar\.gz$',
+                    remove => [ '^MANIFEST\.bak$', '\.bak$' ],
+                  }
+                ],
+                ),
+            'source/MANIFEST.bak' => '',
+            'source/random-stuff.tar.gz' => '',
             'source/lib/Module.pm' => <<'MODULE'
 package Module;
 
@@ -30,6 +36,11 @@ my $content = $tzil->slurp_file('build/MANIFEST.SKIP');
 
 ok $content, 'has content';
 
-note $content;
+# note $content;
+
+my $builddir = path($tzil->tempdir, 'build');
+my @files = map { $_->relative($builddir)->stringify } $builddir->children();
+
+is_filelist( \@files, [qw/ MANIFEST.bak dist.ini MANIFEST.SKIP lib /], 'expected files' );
 
 done_testing;

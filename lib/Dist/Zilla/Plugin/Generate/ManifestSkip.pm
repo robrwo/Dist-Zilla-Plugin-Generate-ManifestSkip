@@ -3,8 +3,10 @@ package Dist::Zilla::Plugin::Generate::ManifestSkip;
 use v5.10;
 
 use Moose;
+extends 'Dist::Zilla::Plugin::ManifestSkip';
 with qw/
     Dist::Zilla::Role::FileGatherer
+    Dist::Zilla::Role::FilePruner
   /;
 
 use List::Util  1.33 qw/ any /;
@@ -14,16 +16,34 @@ use Types::Standard -types;
 
 use namespace::autoclean;
 
+our $VERSION = 'v0.1.0';
+
+sub mvp_multivalue_args { qw/ add remove / }
+
 has mms => (
     is => 'lazy',
     isa => InstanceOf['Module::Manifest::Skip'],
     builder => sub { Module::Manifest::Skip->new },
+    init_arg => undef,
+);
+
+has add => (
+    is      => 'ro',
+    isa     => ArrayRef[Str],
+    default => sub { [] },
+);
+
+has remove => (
+    is      => 'ro',
+    isa     => ArrayRef[Str],
+    default => sub { [] },
 );
 
 sub gather_files {
     my ($self) = @_;
 
     my $zilla = $self->zilla;
+
     my @files = @{ $zilla->files };
     my $mms = $self->mms;
 
@@ -41,13 +61,21 @@ sub gather_files {
     $mms->add('cpanfile\.snapshot$') if any { $_->name eq 'cpanfile' } @files;
     $mms->add('_alien/') if any { $_->name eq 'alienfile' } @files;
 
-    # TODO: apply user adds and removes
+    foreach my $file (@{ $self->add }) {
+        $mms->add($file);
+    }
+
+    foreach my $file (@{ $self->remove }) {
+        $mms->remove($file);
+    }
+
+    $self->log([ 'writing %s', $self->skipfile ]);
 
     require Dist::Zilla::File::InMemory;
     $self->add_file(
         Dist::Zilla::File::InMemory->new(
             {
-                name    => 'MANIFEST.SKIP',
+                name    => $self->skipfile,
                 content => $mms->text,
             }
         )
