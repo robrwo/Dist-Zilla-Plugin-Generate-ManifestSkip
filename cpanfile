@@ -2,6 +2,7 @@ requires "Dist::Zilla::File::InMemory" => "0";
 requires "Dist::Zilla::Plugin::ManifestSkip" => "0";
 requires "Dist::Zilla::Role::FileGatherer" => "0";
 requires "Dist::Zilla::Role::FilePruner" => "0";
+requires "File::ShareDir" => "0";
 requires "List::Util" => "1.33";
 requires "Module::Manifest::Skip" => "0";
 requires "Moose" => "0";

@@ -12,6 +12,7 @@ with qw/
   /;
 
 use List::Util  1.33 qw/ any /;
+use File::ShareDir (); # needed by Module::Manifest::Skip v0.23
 use Module::Manifest::Skip ();
 use MooseX::MungeHas;
 use Types::Standard -types;
