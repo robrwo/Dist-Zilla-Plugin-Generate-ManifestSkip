@@ -6,6 +6,15 @@ Dist::Zilla::Plugin::Generate::ManifestSkip - generate a MANIFEST.SKIP file for 
 
 version v0.1.3
 
+# SYNOPSIS
+
+In your `dist.ini` file:
+
+```
+[Generate::ManifestSkip]
+:version = v0.1.2
+```
+
 # DESCRIPTION
 
 This plugin will generate a `MANIFEST.SKIP` file for your

@@ -21,6 +21,13 @@ use namespace::autoclean;
 
 our $VERSION = 'v0.1.3';
 
+=head1 SYNOPSIS
+
+In your F<dist.ini> file:
+
+  [Generate::ManifestSkip]
+  :version = v0.1.2
+
 =head1 DESCRIPTION
 
 This plugin will generate a F<MANIFEST.SKIP> file for your
