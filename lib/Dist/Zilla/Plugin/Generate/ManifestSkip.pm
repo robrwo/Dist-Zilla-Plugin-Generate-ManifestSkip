@@ -44,6 +44,25 @@ has mms => (
 
 This adds a regular expression to the L</skipfile>.
 
+By defaut, the following files are added to the skipfile:
+
+=over
+
+=item C<\.build/>
+
+=item C<{$dist->name}-.*/>
+
+=item C<{$dist->name}-.*\.tar\.gz>
+
+=back
+
+where C<$dist->name> is the name of the distribution.
+
+If the distribution has an F<alienfile>, then C<_alien/> will be added,
+
+If the distribution has a F<cpanfile>, then C<cpanfile\.snapshot$>
+will be added.
+
 =cut
 
 has add => (
@@ -56,6 +75,21 @@ has add => (
 
 This removes a regular expression from the L</skipfile>. Note that it
 must the expression from L<Module::Manifest::Skip>.
+
+By default, the following files are already removed from the skipfile:
+
+=over
+
+=item C<^MANIFEST\.SKIP$>
+
+=item C<^dist\.ini$>
+
+=item C<^weaver\.ini$>
+
+=back
+
+If you want them to be excluded from your distribution, then specify
+them with L</add>.
 
 =cut
 

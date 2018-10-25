@@ -21,10 +21,32 @@ This is the name of the file to generate. It defaults to `MANIFEST.SKIP`.
 
 This adds a regular expression to the ["skipfile"](#skipfile).
 
+By defaut, the following files are added to the skipfile:
+
+- `\.build/`
+- `{$dist-`name}-.\*/>
+- `{$dist-`name}-.\*\\.tar\\.gz>
+
+where `$dist-`name> is the name of the distribution.
+
+If the distribution has an `alienfile`, then `_alien/` will be added,
+
+If the distribution has a `cpanfile`, then `cpanfile\.snapshot$`
+will be added.
+
 ## remove
 
 This removes a regular expression from the ["skipfile"](#skipfile). Note that it
 must the expression from [Module::Manifest::Skip](https://metacpan.org/pod/Module::Manifest::Skip).
+
+By default, the following files are already removed from the skipfile:
+
+- `^MANIFEST\.SKIP$`
+- `^dist\.ini$`
+- `^weaver\.ini$`
+
+If you want them to be excluded from your distribution, then specify
+them with ["add"](#add).
 
 # SEE ALSO
 
