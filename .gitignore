@@ -1,0 +1,4 @@
+Dist-Zilla-Plugin-Generate-ManifestSkip-*/
+Dist-Zilla-Plugin-Generate-ManifestSkip-*.tar.gz
+.build/
+cpanfile.snapshot
