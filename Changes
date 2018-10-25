@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
 
 {{$NEXT}}
+  [Toolchain]
+  - Added MANIFEST.SKIP to distribution.
 
 v0.1.1    2018-10-25 18:05:41+01:00 Europe/London
   [Documentation]
