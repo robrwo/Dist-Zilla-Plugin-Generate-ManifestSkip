@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
 
 {{$NEXT}}
+
+v0.1.3    2018-10-26 00:57:32+01:00 Europe/London
   [Documentation]
   - Added SYNOPSIS with explicit minimum version requirement.
 
