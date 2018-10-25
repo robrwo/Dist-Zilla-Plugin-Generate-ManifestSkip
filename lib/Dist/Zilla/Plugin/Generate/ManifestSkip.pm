@@ -50,13 +50,13 @@ By defaut, the following files are added to the skipfile:
 
 =item C<\.build/>
 
-=item C<{$dist->name}-.*/>
+=item C<{$dist_name}-.*/>
 
-=item C<{$dist->name}-.*\.tar\.gz>
+=item C<{$dist_name}-.*\.tar\.gz>
 
 =back
 
-where C<$dist->name> is the name of the distribution.
+where C<$dist_name> is the name of the distribution.
 
 If the distribution has an F<alienfile>, then C<_alien/> will be added,
 

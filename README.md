@@ -24,10 +24,10 @@ This adds a regular expression to the ["skipfile"](#skipfile).
 By defaut, the following files are added to the skipfile:
 
 - `\.build/`
-- `{$dist-`name}-.\*/>
-- `{$dist-`name}-.\*\\.tar\\.gz>
+- `{$dist_name}-.*/`
+- `{$dist_name}-.*\.tar\.gz`
 
-where `$dist-`name> is the name of the distribution.
+where `$dist_name` is the name of the distribution.
 
 If the distribution has an `alienfile`, then `_alien/` will be added,
 

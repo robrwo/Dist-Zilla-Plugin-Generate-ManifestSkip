@@ -1,6 +1,9 @@
 Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
 
 {{$NEXT}}
+  [Documentation]
+  - Fixed typos in POD markup.
+
   [Toolchain]
   - Added MANIFEST.SKIP to distribution.
 
