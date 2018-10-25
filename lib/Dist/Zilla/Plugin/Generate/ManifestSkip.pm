@@ -58,6 +58,8 @@ By defaut, the following files are added to the skipfile:
 
 =item C<\.build/>
 
+=item C<\.mailmap$>
+
 =item C<{$dist_name}-.*/>
 
 =item C<{$dist_name}-.*\.tar\.gz>
@@ -121,6 +123,7 @@ sub gather_files {
     $mms->add( '\.build/' );
     $mms->add( $zilla->name . '-.*/' );
     $mms->add( $zilla->name . '-.*\.tar\.gz' );
+    $mms->add( '\.mailmap$' );
 
     $mms->remove('^MANIFEST\.SKIP$');
     $mms->remove('^dist.ini$');

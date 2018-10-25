@@ -33,6 +33,7 @@ This adds a regular expression to the ["skipfile"](#skipfile).
 By defaut, the following files are added to the skipfile:
 
 - `\.build/`
+- `\.mailmap$`
 - `{$dist_name}-.*/`
 - `{$dist_name}-.*\.tar\.gz`
 

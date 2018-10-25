@@ -4,6 +4,9 @@ Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
   [Documentation]
   - Added SYNOPSIS with explicit minimum version requirement.
 
+  [Enhancements]
+  - Exclude .mailmap file by default.
+
 v0.1.2    2018-10-25 21:27:22+01:00 Europe/London
   [Bug Fixes]
   - Specified a prerequisite that's needed by Module::Manifest::Skip
