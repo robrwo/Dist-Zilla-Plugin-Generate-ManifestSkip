@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::Generate::ManifestSkip - generate a MANIFEST.SKIP file for 
 
 # VERSION
 
-version v0.1.0
+version v0.1.1
 
 # DESCRIPTION
 
