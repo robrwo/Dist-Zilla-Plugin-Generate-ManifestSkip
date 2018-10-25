@@ -96,6 +96,8 @@ By default, the following files are already removed from the skipfile:
 
 =item C<^weaver\.ini$>
 
+=item C<^xt/>
+
 =back
 
 If you want them to be excluded from your distribution, then specify
@@ -128,6 +130,7 @@ sub gather_files {
     $mms->remove('^MANIFEST\.SKIP$');
     $mms->remove('^dist.ini$');
     $mms->remove('^weaver.ini$');
+    $mms->remove('^xt/');
 
     $mms->add('cpanfile\.snapshot$') if any { $_->name eq 'cpanfile' } @files;
     $mms->add('_alien/') if any { $_->name eq 'alienfile' } @files;

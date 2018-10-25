@@ -5,7 +5,13 @@ Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
   - Added SYNOPSIS with explicit minimum version requirement.
 
   [Enhancements]
-  - Exclude .mailmap file by default.
+  - The following are now excluded from the skipfile by default:
+    + .mailmap
+    + ^xt/
+
+  [Bug Fixes]
+  - Exclude xt from the skipfile, to avoid extra tests from being
+    omitted.
 
 v0.1.2    2018-10-25 21:27:22+01:00 Europe/London
   [Bug Fixes]

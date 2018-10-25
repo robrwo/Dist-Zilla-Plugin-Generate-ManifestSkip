@@ -54,6 +54,7 @@ By default, the following files are already removed from the skipfile:
 - `^MANIFEST\.SKIP$`
 - `^dist\.ini$`
 - `^weaver\.ini$`
+- `^xt/`
 
 If you want them to be excluded from your distribution, then specify
 them with ["add"](#add).
