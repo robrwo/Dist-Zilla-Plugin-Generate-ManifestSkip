@@ -84,7 +84,7 @@ has add => (
 =attr remove
 
 This removes a regular expression from the L</skipfile>. Note that it
-must the expression from L<Module::Manifest::Skip>.
+must exactly match the expression used by L<Module::Manifest::Skip>.
 
 By default, the following files are already removed from the skipfile:
 
