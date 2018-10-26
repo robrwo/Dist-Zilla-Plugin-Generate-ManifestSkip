@@ -26,7 +26,7 @@ our $VERSION = 'v0.1.4';
 In your F<dist.ini> file:
 
   [Generate::ManifestSkip]
-  :version = v0.1.2
+  :version = v0.1.3
 
 =head1 DESCRIPTION
 
