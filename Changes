@@ -9,7 +9,7 @@ v0.1.3    2018-10-26 00:57:32+01:00 Europe/London
   - Added SYNOPSIS with explicit minimum version requirement.
 
   [Enhancements]
-  - The .mailmap file is added to the .mailmap by default.
+  - The .mailmap file is added to the skipfile by default.
 
   [Bug Fixes]
   - Exclude xt from the skipfile, to avoid extra tests from being
