@@ -47,7 +47,7 @@ will be added.
 ## remove
 
 This removes a regular expression from the ["skipfile"](#skipfile). Note that it
-must the expression from [Module::Manifest::Skip](https://metacpan.org/pod/Module::Manifest::Skip).
+must exactly match the expression used by [Module::Manifest::Skip](https://metacpan.org/pod/Module::Manifest::Skip).
 
 By default, the following files are already removed from the skipfile:
 
