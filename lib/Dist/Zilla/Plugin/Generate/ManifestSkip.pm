@@ -132,7 +132,10 @@ sub gather_files {
     $mms->remove('^weaver.ini$');
     $mms->remove('^xt/');
 
-    $mms->add('cpanfile\.snapshot$') if any { $_->name eq 'cpanfile' } @files;
+    if ( any { $_->name eq 'cpanfile' } @files ) {
+        $mms->add('cpanfile\.snapshot$');
+        $mms->add('local/');
+    }
     $mms->add('_alien/') if any { $_->name eq 'alienfile' } @files;
 
     foreach my $file (@{ $self->add }) {
