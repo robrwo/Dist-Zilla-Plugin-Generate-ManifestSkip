@@ -4,6 +4,9 @@ Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
   [Enhancements]
   - Perltidy logs are added to the skipfile by default.
 
+  [Documentation]
+  - Tweaked ABSTRACT.
+
 v0.1.4    2018-11-08 12:45:17+00:00 Europe/London
   [Documentation]
   - Corrected typos in POD and Changes.

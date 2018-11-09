@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::Generate::ManifestSkip;
 
-# ABSTRACT: generate a MANIFEST.SKIP file for your distribution
+# ABSTRACT: Generate a MANIFEST.SKIP file for your distribution
 
 use v5.10;
 
