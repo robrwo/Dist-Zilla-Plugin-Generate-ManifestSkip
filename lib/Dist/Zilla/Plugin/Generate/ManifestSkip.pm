@@ -126,6 +126,7 @@ sub gather_files {
     $mms->add( $zilla->name . '-.*/' );
     $mms->add( $zilla->name . '-.*\.tar\.gz' );
     $mms->add( '\.mailmap$' );
+    $mms->add( 'perltidy\.(LOG|ERR)' );
 
     $mms->remove('^MANIFEST\.SKIP$');
     $mms->remove('^dist.ini$');
