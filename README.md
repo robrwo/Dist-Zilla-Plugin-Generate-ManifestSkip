@@ -1,6 +1,6 @@
 # NAME
 
-Dist::Zilla::Plugin::Generate::ManifestSkip - generate a MANIFEST.SKIP file for your distribution
+Dist::Zilla::Plugin::Generate::ManifestSkip - Generate a MANIFEST.SKIP file for your distribution
 
 # VERSION
 
@@ -36,6 +36,8 @@ By defaut, the following files are added to the skipfile:
 - `\.mailmap$`
 - `{$dist_name}-.*/`
 - `{$dist_name}-.*\.tar\.gz`
+- `perltidy\.(LOG|ERR)'`
+- `fatlib/`
 
 where `$dist_name` is the name of the distribution.
 
