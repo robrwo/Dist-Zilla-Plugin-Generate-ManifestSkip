@@ -64,6 +64,8 @@ By defaut, the following files are added to the skipfile:
 
 =item C<{$dist_name}-.*\.tar\.gz>
 
+=item C<perltidy\.(LOG|ERR)'>
+
 =back
 
 where C<$dist_name> is the name of the distribution.
