@@ -66,6 +66,8 @@ By defaut, the following files are added to the skipfile:
 
 =item C<perltidy\.(LOG|ERR)'>
 
+=item C<fatlib/>
+
 =back
 
 where C<$dist_name> is the name of the distribution.
@@ -129,6 +131,7 @@ sub gather_files {
     $mms->add( $zilla->name . '-.*\.tar\.gz' );
     $mms->add( '\.mailmap$' );
     $mms->add( 'perltidy\.(LOG|ERR)' );
+    $mms->add( 'fatlib/' );
 
     $mms->remove('^MANIFEST\.SKIP$');
     $mms->remove('^dist.ini$');

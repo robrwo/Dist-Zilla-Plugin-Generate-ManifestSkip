@@ -4,6 +4,8 @@ Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
   [Enhancements]
   - Perltidy logs are added to the skipfile by default.
 
+  - App::FatPacker directories are added to the skipfile by default.
+
   [Documentation]
   - Tweaked ABSTRACT.
 
