@@ -89,7 +89,7 @@ Some of the code and tests have been borrowed from [Dist::Zilla::Plugin::Install
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2018 by Robert Rothenberg.
+This software is Copyright (c) 2018-2022 by Robert Rothenberg.
 
 This is free software, licensed under:
 
