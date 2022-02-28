@@ -1,6 +1,10 @@
 Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Remove bad rule that caused conflicts with Module::CPANS::Analyse
+    (RT#141565).
+
   [Documentation]
   - Fix encoding of links in README.
 

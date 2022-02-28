@@ -137,6 +137,7 @@ sub gather_files {
     $mms->remove('^dist.ini$');
     $mms->remove('^weaver.ini$');
     $mms->remove('^xt/');
+    $mms->remove('^\w$'); # RT#141565
 
     if ( any { $_->name eq 'cpanfile' } @files ) {
         $mms->add('cpanfile\.snapshot$');
