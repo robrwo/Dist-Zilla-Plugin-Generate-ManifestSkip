@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
 
 {{$NEXT}}
+
+v0.1.6    2022-02-28 23:28:45+00:00 Europe/London
   [Bug Fixes]
   - Remove bad rule that caused conflicts with Module::CPANS::Analyse
     (RT#141565).
