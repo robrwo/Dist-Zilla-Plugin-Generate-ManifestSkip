@@ -132,6 +132,7 @@ sub gather_files {
     $mms->add( '\.mailmap$' );
     $mms->add( 'perltidy\.(LOG|ERR)' );
     $mms->add( 'fatlib/' );
+    $mms->add( '^\.mite$' );
 
     $mms->remove('^MANIFEST\.SKIP$');
     $mms->remove('^dist.ini$');
