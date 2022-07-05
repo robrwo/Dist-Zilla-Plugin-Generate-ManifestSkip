@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-Generate-ManifestSkip
 
 {{$NEXT}}
+
+v0.1.7    2022-07-05 12:10:13+01:00 Europe/London
   [Enhancements]
   - Add a rule to skip .mite directory.
 
